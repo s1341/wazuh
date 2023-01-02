@@ -13,6 +13,7 @@
  */
 
 
+#include <sys/vfs.h>
 #include "shared.h"
 #ifndef ARGV0
 #define ARGV0 "fs_op"
