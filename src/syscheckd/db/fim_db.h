@@ -14,7 +14,7 @@
 #include "shared.h"
 #include <openssl/evp.h>
 #include "../syscheck.h"
-#include "external/sqlite/sqlite3.h"
+#include <sqlite3.h>
 #include "config/syscheck-config.h"
 #include "fim_db_files.h"
 #include "fim_db_registries.h"

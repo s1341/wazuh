@@ -14,7 +14,7 @@
 
 #define JSON_MAX_FSIZE 536870912
 
-#include <external/cJSON/cJSON.h>
+#include <cjson/cJSON.h>
 
 /**
  * @brief It temporarily saves in memory the content of the file located in path.

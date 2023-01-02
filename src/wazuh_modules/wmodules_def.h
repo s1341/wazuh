@@ -13,7 +13,7 @@
 #define W_MODULES_DEFS
 
 #include <pthread.h>
-#include "cJSON.h"
+#include "cjson/cJSON.h"
 
 #ifdef WIN32
 #include <winsock2.h>

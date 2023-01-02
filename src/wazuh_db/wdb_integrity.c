@@ -13,7 +13,7 @@
  * Foundation.
  */
 
-#include "cJSON.h"
+#include "cjson/cJSON.h"
 #include "os_err.h"
 #include "wdb.h"
 #include "os_crypto/sha1/sha1_op.h"

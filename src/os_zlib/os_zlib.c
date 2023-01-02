@@ -10,7 +10,7 @@
 
 #include "os_zlib.h"
 
-#include "../external/zlib/zlib.h"
+#include "zlib.h"
 
 unsigned long int os_zlib_compress(const char *src, char *dst,
                                    unsigned long int src_size,

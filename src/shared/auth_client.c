@@ -13,7 +13,7 @@
 
 #include "shared.h"
 #include <os_net/os_net.h>
-#include <external/cJSON/cJSON.h>
+#include <cjson/cJSON.h>
 #include "wazuhdb_op.h"
 
 // Remove agent. Returns 0 on success or -1 on error.

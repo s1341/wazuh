@@ -11,7 +11,7 @@
 #ifndef CRAGENT_H
 #define CRAGENT_H
 
-#include <external/cJSON/cJSON.h>
+#include <cjson/cJSON.h>
 
 /* Status */
 typedef enum agent_status_t {

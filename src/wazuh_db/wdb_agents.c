@@ -10,7 +10,7 @@
  */
 
 #include "wdb_agents.h"
-#include "cJSON.h"
+#include "cjson/cJSON.h"
 #include "os_err.h"
 #include "wazuh_db/wdb.h"
 

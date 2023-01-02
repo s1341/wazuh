@@ -10,7 +10,7 @@
 
 #include "csyslogd.h"
 #include "shared.h"
-#include "cJSON.h"
+#include "cjson/cJSON.h"
 #include "config/config.h"
 #include "os_net/os_net.h"
 

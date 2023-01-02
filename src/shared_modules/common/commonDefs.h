@@ -12,7 +12,7 @@
 #ifndef _COMMON_DEFS_H_
 #define _COMMON_DEFS_H_
 
-#include "cJSON.h"
+#include "cjson/cJSON.h"
 
 /**
  * @brief Represents the different host types to be used.

@@ -11,7 +11,7 @@
 #ifndef AGENT_OP_H
 #define AGENT_OP_H
 
-#include "external/cJSON/cJSON.h"
+#include "cjson/cJSON.h"
 #include "config/authd-config.h"
 
 /**

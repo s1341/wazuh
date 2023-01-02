@@ -10,7 +10,7 @@
  */
 #include "shared.h"
 #include "integrator.h"
-#include <external/cJSON/cJSON.h>
+#include <cjson/cJSON.h>
 #include "os_net/os_net.h"
 
 

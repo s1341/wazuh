@@ -7,7 +7,7 @@
 #define JSON_EXTENDED_H
 
 #include "eventinfo.h"
-#include "cJSON.h"
+#include <cjson/cJSON.h>
 #include <regex.h>
 
 #define MAX_MATCHES 10

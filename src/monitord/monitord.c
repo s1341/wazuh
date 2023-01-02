@@ -8,7 +8,7 @@
  * Foundation
  */
 
-#include "cJSON.h"
+#include <cjson/cJSON.h>
 #include "debug_op.h"
 #include "hash_op.h"
 #include "os_err.h"

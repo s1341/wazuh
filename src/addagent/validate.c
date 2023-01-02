@@ -8,7 +8,7 @@
  * Foundation
  */
 
-#include "cJSON.h"
+#include "cjson/cJSON.h"
 #include "manage_agents.h"
 #include "os_crypto/md5/md5_op.h"
 #include "os_err.h"

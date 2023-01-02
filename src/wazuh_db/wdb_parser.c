@@ -12,7 +12,7 @@
 #include "wazuhdb_op.h"
 #include "wdb.h"
 #include "wdb_agents.h"
-#include "external/cJSON/cJSON.h"
+#include "cjson/cJSON.h"
 #include "wdb_state.h"
 
 static struct column_list const TABLE_HOTFIXES[] = {

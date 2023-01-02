@@ -10,7 +10,7 @@
 
 #include "shared.h"
 #include "maild.h"
-#include <external/cJSON/cJSON.h>
+#include <cjson/cJSON.h>
 #ifdef LIBGEOIP_ENABLED
 #include "config/config.h"
 #endif

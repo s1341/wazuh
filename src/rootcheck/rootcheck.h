@@ -13,7 +13,7 @@
 
 #include "list_op.h"
 #include "config/rootcheck-config.h"
-#include "external/cJSON/cJSON.h"
+#include "cjson/cJSON.h"
 
 #ifdef WIN32
 #define PATH_SEP '\\'

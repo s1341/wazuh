@@ -14,7 +14,7 @@
 #include "syscheck_op.h"
 #include "rules.h"
 #include "mitre.h"
-#include "cJSON.h"
+#include <cjson/cJSON.h>
 #include "config.h"
 #include "wazuh_modules/wmodules.h"
 

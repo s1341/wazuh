@@ -143,7 +143,7 @@ typedef enum fdb_stmt {
 
 #include "os_crypto/md5_sha1_sha256/md5_sha1_sha256_op.h"
 #include "headers/integrity_op.h"
-#include "external/sqlite/sqlite3.h"
+#include "sqlite3.h"
 #include "headers/list_op.h"
 
 #ifdef WIN32
