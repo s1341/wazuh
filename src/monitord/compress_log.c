@@ -10,7 +10,7 @@
 
 #include "shared.h"
 #include "monitord.h"
-#include "../external/zlib/zlib.h"
+#include <zlib.h>
 
 
 /* gzip a log file */
