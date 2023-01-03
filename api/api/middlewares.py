@@ -9,7 +9,7 @@ from aiohttp import web, web_request
 from aiohttp.web_exceptions import HTTPException
 from connexion.exceptions import ProblemException, OAuthProblem, Unauthorized
 from connexion.problem import problem as connexion_problem
-from secure import SecureHeaders
+from secure import Secure
 
 from api.configuration import api_conf
 from api.util import raise_if_exc
@@ -17,7 +17,7 @@ from wazuh.core.exception import WazuhTooManyRequests, WazuhPermissionError
 from wazuh.core.utils import get_utc_now
 
 # API secure headers
-secure_headers = SecureHeaders(server="Wazuh", csp="none", xfo="DENY")
+secure_headers = Secure(server="Wazuh", csp="none", xfo="DENY")
 
 logger = getLogger('wazuh-api')
 
