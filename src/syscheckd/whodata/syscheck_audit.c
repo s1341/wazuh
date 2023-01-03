@@ -9,7 +9,7 @@
  */
 #ifdef __linux__
 #include "syscheck_audit.h"
-#include "external/procps/readproc.h"
+#include <procps/readproc.h>
 
 #include <sys/socket.h>
 #include <sys/un.h>
