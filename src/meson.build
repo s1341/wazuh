@@ -527,7 +527,7 @@ executable('wazuh-maild', [
 'os_maild/os_maild_client.c',
 'os_maild/sendcustomemail.c',
 'os_maild/sendmail.c',
-  ], c_args: [default_cargs, '-DARGV0="wazuh-maild"'], dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
+  ], install: true, c_args: [default_cargs, '-DARGV0="wazuh-maild"'], dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
 
 executable('wazuh-csyslogd', [
 'os_csyslogd/alert.c',
@@ -536,13 +536,13 @@ executable('wazuh-csyslogd', [
 'os_csyslogd/csyslogd.c',
 'os_csyslogd/main.c',
 
-  ], c_args: [default_cargs, '-DARGV0="wazuh-csyslogd"'], dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
+  ], install: true, c_args: [default_cargs, '-DARGV0="wazuh-csyslogd"'], dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
 
 executable('wazuh-agentlessd', [
 'agentlessd/agentlessd.c',
 'agentlessd/lessdcom.c',
 'agentlessd/main.c',
-  ], c_args: [default_cargs, '-DARGV0="wazuh-agentlessd"'], dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
+  ], install: true, c_args: [default_cargs, '-DARGV0="wazuh-agentlessd"'], dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
 
 executable('wazuh-execd', [
 'os_execd/config.c',
@@ -552,7 +552,7 @@ executable('wazuh-execd', [
 'os_execd/wcom.c',
 
 'active-response/active_responses.c'
-  ], c_args: [default_cargs, '-DARGV0="wazuh-execd"'], dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
+  ], install: true, c_args: [default_cargs, '-DARGV0="wazuh-execd"'], dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
 
 
 executable('wazuh-logcollector', [
@@ -581,7 +581,7 @@ executable('wazuh-logcollector', [
 'logcollector/read_win_el.c',
 'logcollector/read_win_event_channel.c',
 'logcollector/state.c',
-  ], c_args: [default_cargs, '-DARGV0="wazuh-logcollector"'], dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
+  ], install: true, c_args: [default_cargs, '-DARGV0="wazuh-logcollector"'], dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
 
 executable('wazuh-remoted', [
   'remoted/ar-forward.c',
@@ -601,7 +601,7 @@ executable('wazuh-remoted', [
 'remoted/state.c',
 'remoted/syslog.c',
 'remoted/syslogtcp.c',
-  ], c_args: [default_cargs, '-DARGV0="wazuh-remoted"'], dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
+  ], install: true, c_args: [default_cargs, '-DARGV0="wazuh-remoted"'], dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
 
 executable('wazuh-agentd', [
   'client-agent/agcom.c',
@@ -621,7 +621,7 @@ executable('wazuh-agentd', [
 
 'monitord/rotate_log.c',
 'monitord/compress_log.c',
-  ], c_args: [default_cargs, '-DARGV0="wazuh-agentd"'], dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
+  ], install: true, c_args: [default_cargs, '-DARGV0="wazuh-agentd"'], dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
 
 executable('manage_agents', [
 'addagent/main.c',
@@ -629,79 +629,79 @@ executable('manage_agents', [
 'addagent/manage_keys.c',
 'addagent/read_from_user.c',
 'addagent/validate.c',
-  ], c_args: [default_cargs, '-DARGV0="manage_agents"'], dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
+  ], install: true, c_args: [default_cargs, '-DARGV0="manage_agents"'], dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
 
 executable('clear_stats', [
   'util/clear_stats.c'
-  ], c_args: default_cargs, dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
+  ], install: true, c_args: default_cargs, dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
 
 executable('verify-agent-conf', [
   'util/verify-agent-conf.c'
-  ], c_args: default_cargs, dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
+  ], install: true, c_args: default_cargs, dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
 
 executable('agent_control', [
   'util/agent_control.c',
   'addagent/validate.c'
-  ], c_args: default_cargs, dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
+  ], install: true, c_args: default_cargs, dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
 
 executable('wazuh-regex', [
   'util/wazuh-regex.c'
-  ], c_args: default_cargs, dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
+  ], install: true, c_args: default_cargs, dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
 
 executable('parallel-regex', [
   'util/parallel-regex.c'
-  ], c_args: default_cargs, dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
+  ], install: true, c_args: default_cargs, dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
 
 executable('default-firewall-drop', [
   'active-response/firewalls/default-firewall-drop.c', 'active-response/active_responses.c'
-  ], c_args: default_cargs, dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
+  ], install: true, c_args: default_cargs, dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
 
 executable('pf', [
   'active-response/firewalls/pf.c', 'active-response/active_responses.c'
-  ], c_args: default_cargs, dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
+  ], install: true, c_args: default_cargs, dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
 
 executable('npf', [
   'active-response/firewalls/npf.c', 'active-response/active_responses.c'
-  ], c_args: default_cargs, dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
+  ], install: true, c_args: default_cargs, dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
 
 executable('ipfw', [
   'active-response/firewalls/ipfw.c', 'active-response/active_responses.c'
-  ], c_args: default_cargs, dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
+  ], install: true, c_args: default_cargs, dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
 
 executable('firewalld-drop', [
   'active-response/firewalld-drop.c', 'active-response/active_responses.c'
-  ], c_args: default_cargs, dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
+  ], install: true, c_args: default_cargs, dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
 
 executable('disable-account', [
   'active-response/disable-account.c', 'active-response/active_responses.c'
-  ], c_args: default_cargs, dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
+  ], install: true, c_args: default_cargs, dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
 
 executable('host-deny', [
   'active-response/host-deny.c', 'active-response/active_responses.c'
-  ], c_args: default_cargs, dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
+  ], install: true, c_args: default_cargs, dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
 
 executable('ip-customblock', [
   'active-response/ip-customblock.c', 'active-response/active_responses.c'
-  ], c_args: default_cargs, dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
+  ], install: true, c_args: default_cargs, dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
 
 executable('restart-wazuh', [
   'active-response/restart-wazuh.c', 'active-response/active_responses.c'
-  ], c_args: default_cargs, dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
+  ], install: true, c_args: default_cargs, dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
 
 executable('route-null', [
   'active-response/route-null.c', 'active-response/active_responses.c'
-  ], c_args: default_cargs, dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
+  ], install: true, c_args: default_cargs, dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
 
 executable('kaspersky', [
   'active-response/kaspersky.c', 'active-response/active_responses.c'
-  ], c_args: default_cargs, dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
+  ], install: true, c_args: default_cargs, dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
 
 executable('wazuh-slack', [
   'active-response/wazuh-slack.c', 'active-response/active_responses.c'
-  ], c_args: default_cargs, dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
+  ], install: true, c_args: default_cargs, dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
 
 executable('wazuh-syscheckd', [
-  ], c_args: [default_cargs, '-DARGV0="wazuh-reportd"' ], dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a, syschecklib, rootcheck_a])
+  ], install: true, c_args: [default_cargs, '-DARGV0="wazuh-reportd"' ], dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a, syschecklib, rootcheck_a])
 
 executable('wazuh-monitord', [
 'monitord/compress_log.c',
@@ -715,18 +715,18 @@ executable('wazuh-monitord', [
 'monitord/sign_log.c',
 
 'os_maild/sendcustomemail.c'
-  ], c_args: [default_cargs, '-DARGV0="wazuh-monitord"' ], dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
+  ], install: true, c_args: [default_cargs, '-DARGV0="wazuh-monitord"' ], dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
 
 executable('wazuh-reportd', [
 'reportd/report.c',
-  ], c_args: [default_cargs, '-DARGV0="wazuh-reportd"' ], dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
+  ], install: true, c_args: [default_cargs, '-DARGV0="wazuh-reportd"' ], dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
 
 executable('agent-auth', [
   'addagent/validate.c',
   'os_auth/main-client.c',
   'os_auth/check_cert.c',
   'os_auth/ssl.c',
-  ], c_args: [default_cargs, '-DARGV0="wazuh-authd"' ], dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
+  ], install: true, c_args: [default_cargs, '-DARGV0="wazuh-authd"' ], dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
 
 executable('wazuh-authd', [
   'addagent/validate.c',
@@ -738,16 +738,16 @@ executable('wazuh-authd', [
   'os_auth/auth.c',
   'os_auth/key_request.c',
   'os_auth/generate_cert.c',
-  ], c_args: [default_cargs, '-DARGV0="wazuh-authd"' ], dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
+  ], install: true, c_args: [default_cargs, '-DARGV0="wazuh-authd"' ], dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
 
 
 
 executable('wazuh-logtest-legacy', [
-  ], c_args: [default_cargs, '-DARGV0="wazuh-logtest-legacy"' ], dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a, analysisd_o, output_o, format_o, alerts_a, cdb_a, decoders_test_a, analysisd_testrule_test])
+  ], install: true, c_args: [default_cargs, '-DARGV0="wazuh-logtest-legacy"' ], dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a, analysisd_o, output_o, format_o, alerts_a, cdb_a, decoders_test_a, analysisd_testrule_test])
 
 executable('wazuh-analysisd', [
   'analysisd/logmsg.c'
-  ], c_args: [default_cargs, '-DARGV0="wazuh-analysisd"' ], dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a, analysisd_o, output_o, format_o, alerts_a, cdb_a, decoders_live_a, analysisd_testrule_live])
+  ], install: true, c_args: [default_cargs, '-DARGV0="wazuh-analysisd"' ], dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a, analysisd_o, output_o, format_o, alerts_a, cdb_a, decoders_live_a, analysisd_testrule_live])
 
 
 executable('wazuh-dbd', [
@@ -758,23 +758,15 @@ executable('wazuh-dbd', [
 'os_dbd/main.c',
 'os_dbd/rules.c',
 'os_dbd/server.c',
-  ], c_args: [default_cargs, '-DARGV0="wazuh-dbd"' ], dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
+  ], install: true, c_args: [default_cargs, '-DARGV0="wazuh-dbd"' ], dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
 
 executable('wazuh-integratord', [
 'os_integrator/config.c',
 'os_integrator/integrator.c',
 'os_integrator/intgcom.c',
 'os_integrator/main.c',
-  ], c_args: [default_cargs, '-DARGV0="wazuh-integratord"' ], dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
+  ], install: true, c_args: [default_cargs, '-DARGV0="wazuh-integratord"' ], dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
 
-executable('wazuh-modulesd', ['wazuh_modules/main.c'], c_args: [default_cargs, '-DARGV0="wazuh-modulesd"' ], dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
+executable('wazuh-modulesd', ['wazuh_modules/main.c'], install: true, c_args: [default_cargs, '-DARGV0="wazuh-modulesd"' ], dependencies: dependencies, include_directories: common_inc_dirs, link_with: [libwazuh_a])
 
-executable('wazuh-db', ['wazuh_db/main.c'], c_args: [default_cargs, '-DARGV0="wazuh-db"' ], dependencies: dependencies, include_directories: common_inc_dirs, link_with: [wdblib_o, libwazuh_a])
-
-
-#executable('wazuh-maild', [
-#'os_maild/maild.c',
-  #], 
-  #c_args: ['-O3', '-DNDEBUG', '-DARGV0="wazuh-maild"', '-DINOTIFY_ENABLED=1', '-D_XOPEN_SOURCE=600', '-D_GNU_SOURCE=1'], dependencies: dependencies, include_directories: [header_inc_dir, shared_inc_dir], link_with: [lib_config, lib_shared, lib_os_regex, lib_os_net, lib_os_xml, lib_os_maild, lib_addagent])
-#executable('wazuh-db', wazuh_db_src, c_args: '-DARGV0="wazuh-db"', dependencies: dependencies, include_directories: header_inc_dir)
-
+executable('wazuh-db', ['wazuh_db/main.c'], install: true, c_args: [default_cargs, '-DARGV0="wazuh-db"' ], dependencies: dependencies, include_directories: common_inc_dirs, link_with: [wdblib_o, libwazuh_a])
