@@ -19,7 +19,7 @@
 #include "os_net/os_net.h"
 #include "os_execd/execd.h"
 #include "os_crypto/md5/md5_op.h"
-#include "external/cJSON/cJSON.h"
+#include <cjson/cJSON.h>
 
 #ifndef ARGV0
 #define ARGV0 "wazuh-agent"

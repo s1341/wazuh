@@ -21,7 +21,7 @@
 #include "../wrappers/wazuh/shared/mq_op_wrappers.h"
 #include "../wrappers/wazuh/shared/validate_op_wrappers.h"
 
-#include "../external/cJSON/cJSON.h"
+#include <cjson/cJSON.h>
 #include "headers/store_op.h"
 #include "monitord/monitord.h"
 #include "headers/defs.h"

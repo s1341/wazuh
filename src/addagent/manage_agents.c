@@ -16,7 +16,7 @@
 #include "debug_op.h"
 #include "defs.h"
 #include "os_crypto/md5/md5_op.h"
-#include "external/cJSON/cJSON.h"
+#include <cjson/cJSON.h>
 #include "os_err.h"
 #include <stdio.h>
 #include <stdlib.h>

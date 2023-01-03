@@ -10,7 +10,7 @@
 
 #include "addagent/manage_agents.h"
 #include "sec.h"
-#include "external/cJSON/cJSON.h"
+#include <cjson/cJSON.h>
 
 #undef ARGV0
 #define ARGV0 "agent_control"

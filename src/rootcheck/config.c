@@ -12,7 +12,7 @@
 #include "shared.h"
 #include "rootcheck.h"
 #include "config/config.h"
-#include "external/cJSON/cJSON.h"
+#include <cjson/cJSON.h>
 
 
 /* Read the rootcheck config */

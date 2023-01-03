@@ -14,7 +14,7 @@
 #include "eventinfo.h"
 #include "alerts/alerts.h"
 #include "decoder.h"
-#include "external/cJSON/cJSON.h"
+#include <cjson/cJSON.h>
 #include "plugin_decoders.h"
 #include "os_net/os_net.h"
 #include "string_op.h"

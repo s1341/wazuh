@@ -13,7 +13,7 @@
 #include "shared.h"
 #include "eventinfo.h"
 #include "../../config.h"
-#include "../../external/cJSON/cJSON.h"
+#include <cjson/cJSON.h>
 
 void fillData(Eventinfo *lf, const char *key, const char *value)
 {
