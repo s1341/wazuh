@@ -20,7 +20,7 @@
 #include "wm_control.h"
 #include "sysInfo.h"
 #include "sym_load.h"
-#include "external/cJSON/cJSON.h"
+#include <cjson/cJSON.h>
 #include "file_op.h"
 #include "../os_net/os_net.h"
 static void *wm_control_main();
